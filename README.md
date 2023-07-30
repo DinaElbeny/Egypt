@@ -1,8 +1,8 @@
-#Egypt Website
 
+<h1  id="title">Egypt Website </h1>
 Egypt Website is an introductory site about Egypt and its Tourist attractions
 
-#🧐 About The Project:
+<h2 >🧐 About The Project: </h2>
 
 In This Website I will allow Users to :
 
@@ -16,7 +16,7 @@ Contact with admin
 
 play an entertaining game
 
-#💻 Built with
+<h2 >💻 Built with </h2>
 
 HTML
 
