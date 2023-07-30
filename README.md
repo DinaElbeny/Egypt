@@ -9,6 +9,7 @@ In This Website I will allow Users to :
 Sign-up using (name and email ),
 
 Log-in using ( email and password ).
+
 see all the tourist places
 
 Contact with admin
