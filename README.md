@@ -11,5 +11,7 @@ Contact with admin
 play an entertaining game
 
 💻 Built with
+
 HTML
 CSS
+Javascript
