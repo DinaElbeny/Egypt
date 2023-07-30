@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travel to Egypt</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Go to<h2 class="logo" style="color: #e2ad1c; padding-left: 5px;">EGYPT</h2>
+                </h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./Home.html">HOME</a></li>
+                    <li><a href="./contacts.html">CONTACT</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./games.html">games</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <select style="margin-left: 100px;">
+            <option class="dropdown-item" href="#">Aswan</option>
+            <option class="dropdown-item" href="#">Luxor</option>
+            <option class="dropdown-item" href="#">Alex</option>
+            <option class="dropdown-item" href="#">Giza</option>
+        </select>
+        <div style="margin-left: 100px;color: black;">
+            <p>I will display &euro;</p>
+            <p>I will display &#8719;</p>
+            <p>I will display &#8711;</p>
+            <p>I will display &#60;</p>
+            <p>I will display &#38;</p>
+
+        </div>
+        <div class="container">
+            <table class="table">
+                <tr class="danger">
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Governorate</th>
+                </tr>
+                <tr class="active">
+                    <td>Abu Simbel Temple</td>
+                    <td>Abu Simbel</td>
+                    <td>Aswan</td>
+                </tr>
+                <tr class="info">
+                    <td>Valley of the Kings</td>
+                    <td>Luxor</td>
+                    <td>Luxor</td>
+                </tr>
+                <tr style="background-color: #d4c18a;">
+                    <td>Pyramids</td>
+                    <td>Giza</td>
+                    <td>Giza</td>
+                </tr>
+
+                <tr class="success">
+                    <td>St. Catherine's Monastery</td>
+                    <td>St. Catherine</td>
+                    <td>South of Sinaa</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div class="container">
+
+            <h1 class="heading" style="color: white;">images about Egypt</h1>
+
+            <input type="text" placeholder="search images" id="search-box">
+
+            <div class="image-container">
+
+                <div class="image" data-title="Aswan">
+                    <img src="./images/Egypt.jpg" alt="">
+                    <h3>Aswan</h3>
+                </div>
+
+                <div class="image" data-title="Luxor temple">
+                    <img src="./images/photo_2022-05-27_22-52-45.jpg" alt="">
+                    <h3>Luxor temple</h3>
+                </div>
+
+                <div class="image" data-title="Abu Simbel">
+                    <img src="./images/photo_2022-05-29_16-11-46.jpg" alt="">
+                    <h3>Abu Simbel</h3>
+                </div>
+
+                <div class="image" data-title="Mortuary Temple of Hatshepsut">
+                    <img src="./images/photo_2022-05-29_16-11-55.jpg" alt="">
+                    <h3>Mortuary Temple of Hatshepsut</h3>
+                </div>
+
+                <div class="image" data-title="Philae">
+                    <img src="./images/photo_2022-05-29_16-11-52.jpg" alt="">
+                    <h3>Philae</h3>
+                </div>
+
+                <div class="image" data-title="Pyramids">
+                    <img src="./images/photo_2022-05-29_16-11-39.jpg" alt="">
+                    <h3>Pyramids</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <ul class="pagination" style="margin-left: 50%;">
+                <li><a href="./Home.html">1</a></li>
+                <li><a href="./details.html">2</a></li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    <script>
+
+        let searchBox = document.querySelector('#search-box');
+        let images = document.querySelectorAll('.container .image-container .image');
+
+        searchBox.oninput = () => {
+            images.forEach(hide => hide.style.display = 'none');
+            let value = searchBox.value;
+            images.forEach(filter => {
+                let title = filter.getAttribute('data-title');
+                if (value == title) {
+                    filter.style.display = 'block';
+                }
+                if (searchBox.value == '') {
+                    filter.style.display = 'block';
+                }
+            });
+        };
+
+    </script>
+</body>
+
+</html>

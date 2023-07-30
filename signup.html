@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="main" style="background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(./images/photo_2022-05-29_16-49-43.jpg);    background-position: 50% 50%;
+        background-size: 100% 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed; ">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Go to<h2 class="logo" style="color: #e2ad1c; padding-left: 5px;">EGYPT</h2>
+            </div>
+
+        </div>
+        <div class="content">
+
+            <div class="form" style="height: 520px;margin-top: -80px;">
+                <h2>create account</h2>
+                <form action="./Home.html">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Enter Email Here" required>
+                    <input type="password" placeholder="Enter Password" name="psw" class="psw" onchange="checkpass()"
+                        required>
+                    <span class="span" style="font-size: 18px;"></span>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <button class="btnn" type="submit" required>Sign Up</button>
+                </form>
+                <p class="link">have an account<br>
+                    <a href="login.html">Login </a> here</a>
+                </p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="https://www.facebook.com">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="https://www.google.com">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="https://www.skype.com">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        let pass = document.querySelector('.form .psw');
+        let printStrength = document.querySelector('.form .span');
+        let lower = /[a-z]/g;
+        let upper = /[A-Z]/g;
+        let nums = /[0-9]/g;
+        let char = /[!@#$%^&*]/g;
+        function checkpass() {
+            console.log(pass.value);
+            let weak = false, med = false, strong = false;
+            if (pass.value.match(lower)) {
+                weak = true;
+            }
+            if (pass.value.match(lower) && pass.value.match(upper) && pass.value.match(nums)) {
+                weak = true;
+                med = true;
+            }
+            if (pass.value.match(lower) && pass.value.match(upper) && pass.value.match(nums) && pass.value.match(char)) {
+                weak = true;
+                med = true;
+                strong = true;
+            }
+            if (weak && med && strong) {
+                printStrength.innerHTML = "Strong password";
+                printStrength.style.color = "#79d579";
+            }
+            else if (weak && med) {
+                printStrength.innerHTML = "Meduim Password";
+                printStrength.style.color = "#cca712";
+            }
+            else if (weak) {
+                printStrength.innerHTML = "very week Password ";
+                printStrength.style.color = "#dd4b39";
+            }
+            else {
+                printStrength.innerHTML = "Password is empty";
+                printStrength.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

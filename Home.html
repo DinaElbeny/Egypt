@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travel to Egypt</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="main">
+        <audio autoplay>
+            <source src="./media/Ancient Egyptian Music – Pharaoh Ramses II (192 kbps) (1).mp3">
+        </audio>
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Go to<h2 class="logo" style="color: #e2ad1c; padding-left: 5px;">EGYPT</h2>
+                </h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./Home.html">HOME</a></li>
+                    <li><a href="./contacts.html">CONTACT</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./games.html">games</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content">
+            <pre class="par">    Discover the awe_inspiring <br>Pyramids of Giza and ancient Egypt’s
+                </pre>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center style="font-size: 25px;">THE Ancient</center>
+            <center style="font-size:28px ; color: black; font-weight: bold
+            ;">Egyptian Civilization
+            </center>
+        </div>
+        <div class="container-fluid" style="margin-left: 280px;">
+            <div class="row">
+                <div class="col-sm-4" style="color: white;">
+                    <p>
+                        Egypt, a country linking northeast Africa with the Middle East, dates to the time of the
+                        pharaohs. Millennia-old monuments sit along the fertile Nile River Valley, including Giza's
+                        colossal Pyramids and Great Sphinx as well as Luxor's hieroglyph-lined Karnak Temple and
+                        Valley of the Kings tombs. The capital, Cairo, is home to Ottoman landmarks like Muhammad
+                        Ali Mosque and the Egyptian Museum, a trove of antiquities.
+                    </p>
+                </div>
+                <div class="col-sm-4" style="color: white; margin-left: 90px;">
+                    <p>
+                        Egypt, a country linking northeast Africa with the Middle East, dates to the time of the
+                        pharaohs. Millennia-old monuments sit along the fertile Nile River Valley, including Giza's
+                        colossal Pyramids and Great Sphinx as well as Luxor's hieroglyph-lined Karnak Temple and
+                        Valley of the Kings tombs. The capital, Cairo, is home to Ottoman landmarks like Muhammad
+                        Ali Mosque and the Egyptian Museum, a trove of antiquities.
+                </div>
+            </div>
+        </div>
+        <center style="margin-top: 30px;">
+            <video width="700px" height="400" controls>
+                <source src="./media/video_2022-05-29_23-14-01.mp4" type="video/mp4">
+            </video>
+        </center>
+        <div class="container">
+            <a href="./details.html"><button type="button" class="btn" style="margin-left: 48%;">See more</button></a>
+        </div>
+        <div class="container">
+            <ul class="pagination" style="margin-left: 50%;">
+                <li><a href="./Home.html">1</a></li>
+                <li><a href="./details.html">2</a></li>
+            </ul>
+        </div>
+
+        <div style="     display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'IBM Plex Sans', sans-serif;">
+            <div style="color: white; font-size: 30px;">The Time is: </div>
+            <div id="Clock" class="glow">00:00:00</div>
+        </div>
+
+
+
+    </div>
+    <script>
+        setInterval(displayTime, 1000);
+
+        function displayTime() {
+
+            const timeNow = new Date();
+
+            let hoursOfDay = timeNow.getHours();
+            let minutes = timeNow.getMinutes();
+            let seconds = timeNow.getSeconds();
+            let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            let today = weekDay[timeNow.getDay()];
+            let months = timeNow.toLocaleString("default", {
+                month: "long"
+            });
+            let year = timeNow.getFullYear();
+            let period = "AM";
+
+            if (hoursOfDay > 12) {
+                hoursOfDay -= 12;
+                period = "PM";
+            }
+
+            if (hoursOfDay === 0) {
+                hoursOfDay = 12;
+                period = "AM";
+            }
+
+            hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            let time = hoursOfDay + ":" + minutes + ":" + seconds + period;
+
+            document.getElementById('Clock').innerHTML = time + " " + today + " " + months + " " + year;
+
+        }
+        displayTime();
+    </script>
+</body>
+
+</html>
